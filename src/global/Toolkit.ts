@@ -1,8 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
+import { ProductReducer } from "./ProductSlice";
+import { CategoryReducer } from "./CategorySlice";
 
 export const Reducer = configureStore({
     reducer: {
-        products: () => "Products via Fetch!"
+        products: ProductReducer,
+        category: CategoryReducer
     },
 });
 

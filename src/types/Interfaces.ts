@@ -7,7 +7,7 @@ export interface IProduct {
     rating: number,
     stock: number,
     brand: string,
-    category: string,
+    category: ICategory,
     thumbnail: string,
     images: string[]
 };
@@ -28,5 +28,18 @@ export interface ICartState {
     cartStatus: boolean,
     detailStatus: boolean
 };
+
+export interface ICategory {
+    category: string
+};
+
+export interface ICategoryState {
+    categories: ICategory[],
+    prodCategory: IProduct[],
+    loading: boolean,
+    error?: Error | null
+};
+
+
 
 

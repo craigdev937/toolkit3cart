@@ -6,6 +6,7 @@ import { Home } from "../pages/Home/Home";
 import { Product } from "../pages/Product/Product";
 import { Category } from "../pages/Category/Category";
 import { Search } from "../pages/Search/Search";
+import { Cart } from "../pages/Cart/Cart";
 import { ErrorCom } from "../components/ErrorCom";
 
 const Router = createBrowserRouter([
@@ -27,6 +28,11 @@ const Router = createBrowserRouter([
             {
                 path: "/category/:category",
                 element: <Category />,
+                errorElement: <ErrorCom />
+            },
+            {
+                path: "/cart",
+                element: <Cart />,
                 errorElement: <ErrorCom />
             },
             {
